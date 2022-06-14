@@ -20,13 +20,7 @@
 <div class="global-heading">
 	<h3>{{t "Choose your plan"}}</h3>
 </div>
-<div class="membership-cards">
-	{{^if @member}}
-	{{>members/plan_free}}
-	{{/if}}
-	{{>members/plan_monthly}}
-	{{>members/plan_yearly}}
-</div>
+{{>members/tiers free_tier=true}}
 {{^if @member}}
 <small class="global-question">{{t "Already have an account?"}} <a href="{{@site.url}}/signin/">{{t "Sign in"}}</a></small>
 {{/if}}

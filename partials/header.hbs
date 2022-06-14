@@ -22,10 +22,13 @@
 					<span class="bar"></span>
 				</span>
 			</label>
-			<nav>
+			<nav {{#if @custom.content_api_key_for_search}}class="is-search"{{/if}}>
 				<ul>{{navigation}}</ul>
 				<ul>
+					{{#if @custom.content_api_key_for_search}}
 					<li id="search-open" class="header-search"><span>{{t "Search"}}</span>{{>icons/site/search}}</li>
+					{{/if}}
+					{{>members/login_panel}}
 				</ul>
 			</nav>
 		</div>

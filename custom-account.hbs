@@ -59,14 +59,15 @@
 			{{t "Your subscription will expire on"}} — {{date current_period_end format="DD MMMM YYYY"}}. {{t "If you change your mind in the meantime you can turn auto-renew back on to continue your subscription."}}
 			</small>
 			{{/if}}
-			<div class="account-detail-billing">
-				<a href="#" data-members-edit-billing>{{t "Edit billing info"}} <span>&rarr;</span></a>
+			<div class="account-detail-buttons">
+				<a href="javascript:" data-portal="account/plans">{{t "Change plan"}}</a>
+				<a href="javascript:" data-members-edit-billing>{{t "Edit billing info"}} <span>&rarr;</span></a>
 			</div>
 		</div>
 	</div>
 	{{/foreach}}
 </div>
-{{#get "posts" limit="5" filter="visibility:paid" include="authors" as |paid_posts|}}
+{{#get "posts" limit="5" filter="visibility:[paid,tiers]" include="authors,tiers" as |paid_posts|}}
 {{#if paid_posts}}
 <div class="special-section">
 	<div class="membership-heading global-heading">
@@ -118,10 +119,7 @@
 <div class="membership-heading global-heading">
 	<h3>{{t "More posts? Choose your plan"}}</h3>
 </div>
-<div class="membership-cards">
-	{{>members/plan_monthly}}
-	{{>members/plan_yearly}}
-</div>
+{{>members/tiers}}
 {{else}}
 <script>
 window.addEventListener("load", function(e) {

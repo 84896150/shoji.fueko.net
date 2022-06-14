@@ -6,7 +6,6 @@
 			{{#foreach pages}}
 			<div class="pinned-item">
 				<a href="{{url}}" class="global-link" aria-label="pinned {{title}}"></a>
-				{{>members/visibility_label}}
 				{{#if feature_image}}
 				<div class="pinned-image global-image">
 					{{>images/loop_feature_img}}
@@ -26,7 +25,6 @@
 			{{#foreach posts}}
 			<div class="pinned-item">
 				<a href="{{url}}" class="global-link" aria-label="pinned {{title}}"></a>
-				{{>members/visibility_label}}
 				{{#if feature_image}}
 				<div class="pinned-image global-image">
 					{{>images/loop_feature_img}}

@@ -3,6 +3,9 @@
 	{{#has visibility="paid"}}
 	{{t "Paid-members"}}
 	{{/has}}
+	{{#has visibility="tiers"}}
+	{{tiers lastSeparator=", " suffix=""}}
+	{{/has}}
 	{{#has visibility="members"}}
 	{{t "Members"}}
 	{{/has}}

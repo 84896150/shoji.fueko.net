@@ -1,10 +1,7 @@
 {
     "name": "shoji",
     "demo": "https://shoji.fueko.net",
-    "version": "2.0.0",
-    "engines": {
-        "ghost-api": "v4"
-    },
+    "version": "3.0.0",
     "author": {
         "name": "fueko",
         "email": "hello@fueko.net",
@@ -14,6 +11,37 @@
         "ghost-theme"
     ],
     "config": {
-        "posts_per_page": 7
+        "posts_per_page": 7,
+        "card_assets": {
+            "exclude": ["bookmark", "gallery", "blockquote"]
+        },
+        "custom": {
+            "color_scheme": {
+                "type": "select",
+                "options": ["Light", "Dark", "Auto"],
+                "default": "Light"
+            },
+            "standard_load_more_button": {
+                "type": "boolean",
+                "default": false
+            },
+            "navigation_on_the_right_side": {
+                "type": "boolean",
+                "default": false
+            },
+            "content_api_key_for_search": {
+                "type": "text"
+            },
+            "contact_form_endpoint": {
+                "type": "text"
+            },
+            "footer_copyright": {
+                "type": "text"
+            },
+            "disqus_shortname": {
+                "type": "text",
+                "group": "post"
+            }
+        }
     }
 }
