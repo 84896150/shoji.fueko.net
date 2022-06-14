@@ -1,0 +1,46 @@
+{
+    "name": "shoji",
+    "demo": "https://shoji.fueko.net",
+    "version": "2.1.4",
+    "engines": {
+        "ghost-api": "v4"
+    },
+    "author": {
+        "name": "fueko",
+        "email": "hello@fueko.net",
+        "url": "https://fueko.net"
+    },
+    "keywords": [
+        "ghost-theme"
+    ],
+    "config": {
+        "posts_per_page": 7,
+        "card_assets": {
+            "exclude": ["bookmark", "gallery", "blockquote"]
+        },
+        "custom": {
+            "color_scheme": {
+                "type": "select",
+                "options": ["Light", "Dark", "Auto"],
+                "default": "Light"
+            },
+            "navigation_on_the_right_side": {
+                "type": "boolean",
+                "default": false
+            },
+            "search_api_key": {
+                "type": "text"
+            },
+            "contact_form_endpoint": {
+                "type": "text"
+            },
+            "footer_copyright": {
+                "type": "text"
+            },
+            "disqus_shortname": {
+                "type": "text",
+                "group": "post"
+            }
+        }
+    }
+}
