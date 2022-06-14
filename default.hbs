@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{@site.locale}}"{{#match @custom.color_scheme "Dark"}} class="dark-mode"{{/match}}{{#match @custom.color_scheme "Auto"}} class="auto-dark-mode"{{/match}}>
+<html lang="{{@site.locale}}">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}">
 		{{ghost_head}}
 	</head>
-	<body class="{{body_class}}{{#if @custom.navigation_on_the_right_side}} global-nav-right{{/if}}">
+	<body class="{{body_class}}{{#get "tags" limit="all" filter="visibility:internal"}}{{#foreach tags visibility="internal"}} global-{{slug}}{{/foreach}}{{/get}}">
 		<div class="global-wrap">
 			<div class="global-content">
 				{{>header}}

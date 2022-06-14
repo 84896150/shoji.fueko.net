@@ -1,13 +1,64 @@
-{{! Detailed instructions can be found in the Documentation >> Activation >> Special sections }}
+{{!-- Step one — remove brackets "{{!‐‐" and "‐‐}}" to use Special sections --}}
+{{!-- Step two — the only thing you need to change is "XXXXX" - which should be replaced with your own tag name, link and slug --}}
 
-{{!--
 <div class="special-section">
 	<div class="global-heading">
-		<h3>XXXXX</h3>
-		<a href="{{@site.url}}/tag/XXXXX/">See all XXXXX{{>icons/site/arrow_right}}</a>
+		<h3>Design & UX</h3>
+		<a href="{{@site.url}}/tag/digital-design/">See all Design & UX guides{{>icons/site/arrow_right}}</a>
 	</div>
-	{{#get "posts" limit="5" filter="tag:XXXXX" include="authors"}}
+	{{#get "posts" limit="5" filter="tag:digital-design" include="authors"}}
 	{{>sections_content}}
 	{{/get}}
 </div>
---}}
+
+<div class="special-section">
+	<div class="global-heading">
+		<h3>Acquisition</h3>
+		<a href="{{@site.url}}/tag/acquisition/">See all Acquisition guides{{>icons/site/arrow_right}}</a>
+	</div>
+	{{#get "posts" limit="5" filter="tag:acquisition" include="authors"}}
+	{{>sections_content}}
+	{{/get}}
+</div>
+
+<div class="special-section">
+	<div class="global-heading">
+		<h3>Activation</h3>
+		<a href="{{@site.url}}/tag/activation/">See all Activation guides{{>icons/site/arrow_right}}</a>
+	</div>
+	{{#get "posts" limit="5" filter="tag:activation" include="authors"}}
+	{{>sections_content}}
+	{{/get}}
+</div>
+
+<div class="special-section">
+	<div class="global-heading">
+		<h3>Referral</h3>
+		<a href="{{@site.url}}/tag/referral/">See all Referral marketing guides{{>icons/site/arrow_right}}</a>
+	</div>
+	{{#get "posts" limit="5" filter="tag:referral" include="authors"}}
+	{{>sections_content}}
+	{{/get}}
+</div>
+
+
+<div class="special-section">
+	<div class="global-heading">
+		<h3>Retention</h3>
+		<a href="{{@site.url}}/tag/retention/">See all Retention guides{{>icons/site/arrow_right}}</a>
+	</div>
+	{{#get "posts" limit="5" filter="tag:retention" include="authors"}}
+	{{>sections_content}}
+	{{/get}}
+</div>
+
+<div class="special-section">
+	<div class="global-heading">
+		<h3>Revenue</h3>
+		<a href="{{@site.url}}/tag/revenue/">See all Revenue generation guides{{>icons/site/arrow_right}}</a>
+	</div>
+	{{#get "posts" limit="5" filter="tag:revenue" include="authors"}}
+	{{>sections_content}}
+	{{/get}}
+</div>
+

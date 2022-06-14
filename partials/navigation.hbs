@@ -19,9 +19,11 @@
 {{else}}
 
 
+
+
 {{! Footer navigation }}
 
-{{#foreach navigation limit="4"}}
+{{#foreach navigation limit="10"}}
 {{#if @first}}
 <div class="footer-nav-column">
 	<h5>{{t "Column 1"}}</h5>
@@ -34,7 +36,7 @@
 {{/if}}
 {{/foreach}}
 
-{{#foreach navigation limit="4" from="5"}}
+{{#foreach navigation limit="10" from="11"}}
 {{#if @first}}
 <div class="footer-nav-column">
 	<h5>{{t "Column 2"}}</h5>
@@ -47,7 +49,7 @@
 {{/if}}
 {{/foreach}}
 
-{{#foreach navigation limit="4" from="9"}}
+{{#foreach navigation limit="10" from="21"}}
 {{#if @first}}
 <div class="footer-nav-column">
 	<h5>{{t "Column 3"}}</h5>
@@ -60,7 +62,7 @@
 {{/if}}
 {{/foreach}}
 
-{{#foreach navigation from="13"}}
+{{#foreach navigation from="31"}}
 {{#if @first}}
 <div class="footer-nav-column">
 	<h5>{{t "Column 4"}}</h5>
